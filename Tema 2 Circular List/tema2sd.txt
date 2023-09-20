@@ -1,0 +1,12 @@
+The algorithm is based on the "Node" class.
+It contains 2 attributes: data (the value assigned to each node) and next (a pointer to the next node).
+The second class is called CircularList, and it has an attribute called head, a pointer to the head node of the list.
+The insert function creates a new node and attaches it to the "tail" . If the list is empty, the new node becomes the head of the list
+and it points to itself. Otherwise, the algorithm goes through the list and stops when it finds the tail and inserts the node. 
+At the end the algorithm sets new_node->next to point to the head.
+The print method goes through the entire list and displays the data for each node.
+The remove method treats 3 cases.    
+	1. The node that we want to remove is the head, and the list contains just one node. (Then we delete it and set the head to point to the nullptr)
+    	2. The node that we want to remove is the head, and the list contains more nodes. ( So, we will delete it, but we will set    the second node as head)    
+	3. The node is not the head. (So we just delete it and link the previous node to the node->next node)
+The findLastSurvivor method uses the functions stated above to go through the list 3 by 3 and eliminate each node until the list has only one element.
