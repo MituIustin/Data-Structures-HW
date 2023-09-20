@@ -1,0 +1,25 @@
+The algorithm implements an intersection detection mechanism for line segments using an AVL tree data structure. 
+It allows us to efficiently find whether two line segments intersect or not, and if they do, it also determines 
+the coordinates of the intersection point.
+
+The algorithm begins by defining structures for a point and a line segment. 
+The line segments are represented by their starting and ending points. It also defines a structure for an AVL node, 
+which holds a line segment, as well as pointers to its left and right children in the AVL tree.
+
+The algorithm provides various helper functions to perform operations on the AVL tree. 
+These functions include creating a new AVL node, getting the height of a node, calculating the balance factor, 
+updating the height, and performing left and right rotations to balance the AVL tree.
+
+To find the intersection point, the algorithm inserts line segments into the AVL tree using the insertSegment function. 
+Each insertion triggers AVL tree balancing to maintain the tree's height balance property.
+
+To check if two line segments intersect, the algorithm uses the doSegmentsIntersect function, which calculates the 
+direction of the line segments based on their coordinates. If the directions satisfy certain conditions, 
+indicating intersection, the function returns true.
+
+Once an intersection is detected, the algorithm uses the findIntersectionPoint function to calculate the coordinates 
+of the intersection point by solving a system of linear equations.
+
+Finally, the findIntersectionInAVLTree function searches for the intersection point within the AVL tree. It traverses 
+the tree based on the coordinates of the input segment and checks for intersections with each segment in the tree. 
+If an intersection is found, the corresponding intersection point is returned.

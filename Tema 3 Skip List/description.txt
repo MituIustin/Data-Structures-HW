@@ -1,0 +1,6 @@
+In this file I just implemented a linked list and a skip list. 
+My algorithm does not fully comply with the requirement because 
+I chose to do only 1000 insertions/searches/deletions instead of 10000, 
+but I think it is enough to notice that a skip list is more efficient. 
+This is the significant difference, I inserted/searched and deleted the same names and numbers. 
+For simplicity, I preferred that instead of generating a random phone number, I generated a number smaller than 99999.
